@@ -1,10 +1,13 @@
-package ifCondition;
+package condition;
 
 import java.util.Scanner;
-
-public class CalcAvg {
-	public void calcAvg(){
-
+/*
+ * @Date:2015.07.10
+ * @Author:me
+ * @Story: switch 예제(합격여부 구하기)
+ * */
+public class SwitchAvg {
+	public void calc() {
 		// 지역변수 선언부
 		String name = "", enter = "";
 		int kor = 0, eng = 0, math = 0, sum = 0, avg = 0;
@@ -19,15 +22,14 @@ public class CalcAvg {
 		math = scanner.nextInt();
 		sum = kor + eng + math;
 		avg = sum / 3;
-
-		if (avg >= 90) {
-			enter = "장학생";
-		} else if (avg >= 70 && avg < 90) {
-			enter = "합격";
-		} else {
-			enter = "불합격";
+		
+		// 아래부분을 switch-case 로 전환
+		switch (avg/10) {
+		case 10:case 9: enter="장학생"; break;
+		case 8:case 7: enter="합격"; break;
+		default: enter="불합격"; break;
 		}
-
+		// 출력부
 		System.out.println("학생\t국어\t영어\t수학\t총점\t평균\t합격여부");
 		System.out.println("--------------------------------------------------------");
 		System.out.println(name + "\t" + kor + "\t" + eng + "\t" + math + "\t" + sum + "\t" + avg + "\t" + enter);

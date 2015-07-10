@@ -1,8 +1,14 @@
-package whileLoop;
-
+package loop;
+/*
+ * @Date:2015.07.09
+ * @Author:me
+ * @Story: while Loop 문법
+ * */
 public class WhileLoopMain2 {
 	public static void main(String[] args) {
+		//선언부
 		int idx = 0;
+		//연산부
 		while (true) { // 무한루프 사용 선언
 			idx++;
 			System.out.print(idx+"\t");
@@ -11,5 +17,7 @@ public class WhileLoopMain2 {
 				break;
 			}
 		}
+		//출력부
+		System.out.println();
 	}
 }
